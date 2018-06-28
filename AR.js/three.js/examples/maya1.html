@@ -41,6 +41,7 @@
 	renderer.domElement.style.position = 'absolute'
 	renderer.domElement.style.top = '0px'
 	renderer.domElement.style.left = '0px'
+	renderer.sortObjects = false;
 	container.appendChild(renderer.domElement);
 	//document.body.appendChild( renderer.domElement );
 	// array of functions for the rendering loop
@@ -212,7 +213,7 @@
 	var loader = new THREE.FBXLoader();
 	loader.load( 'models/maya1/maya_fbx_ma.fbx', function ( object ) {				
 	//object.mixer = new THREE.AnimationMixer( object );
-		alert(1);
+		alert(2);
 			//mixers.push( object.mixer );
 
 			//var action = object.mixer.clipAction( object.animations[ 0 ] );
