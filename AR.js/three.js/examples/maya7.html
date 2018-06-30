@@ -210,24 +210,19 @@
 	
 	
 	// model
-	var loader = new THREE.FBXLoader();
-	loader.load( 'models/0617/1/1.fbx', function ( object ) {				
-	//object.mixer = new THREE.AnimationMixer( object );
-		alert(2);
-			//mixers.push( object.mixer );
-
-			//var action = object.mixer.clipAction( object.animations[ 0 ] );
-				//action.play();
-		
-		object.scale.x =  object.scale.y =  object.scale.z = 0.01;
-		
-		object.rotation.x = Math.PI * 1.2 ;
-		object.rotation.y = Math.PI * 1.7 ;
-		object.rotation.z = Math.PI * 1.96 ;
-		
-		//object.rotation.set(Math.PI*1.5,Math.PI*1.5,Math.PI) ;
-		markerRoot.add( object );
-	} ) ;
+	var objectLoader = new THREE.ObjectLoader();				
+	objectLoader.load("models/maya7/huanyi_maya.obj", function ( obj ) {			
+			mesh = obj;	
+				
+			alert(5);
+			//  改变模型初期化大小
+			mesh.scale.x =  mesh.scale.y =  mesh.scale.z = 0.15;	
+			// 改变模型初期化角度
+			mesh.rotation.x = Math.PI*1.5;	
+			mesh.rotation.y = Math.PI/2;	
+			mesh.rotation.z = (Math.PI/9)*7.32;
+			markerRoot.add( mesh );	
+	} );	
 	//////////////////////////////////////////////////////////////////////////////////
 	//		render the whole thing on the page
 	//////////////////////////////////////////////////////////////////////////////////
