@@ -211,11 +211,11 @@
 	
 	
 	// model
-	var objectLoader = new THREE.ObjectLoader();				
+	var loader = new THREE.OBJLoader();				
 	objectLoader.load("models/maya7/huanyi_maya.obj", function ( obj ) {			
 			mesh = obj;	
 				
-			alert(7);
+			alert(71);
 			//  改变模型初期化大小
 			mesh.scale.x =  mesh.scale.y =  mesh.scale.z = 0.15;	
 			// 改变模型初期化角度
